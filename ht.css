@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.row{
+    width: 80%;
+    max-width: 1170px;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px 30px;
+}
+.row .left{
+    overflow: hidden;
+}
+.row .left img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.row .right{
+    display: flex;
+    align-items: center;
+}
+.row .right .content{
+    padding-left: 20px;
+}
+.row .right .content p{
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 15px;
+}
+@media(max-width:991px){
+    .row .right .content{
+        padding-left: 0;
+    }
+}
+@media(max-width:768px){
+    .row{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+hr{
+    font-size: bold;
+    color: black;
+}
+#features{
+    width: 100%;
+    padding: 70px 0;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+    font-weight: bolder;
+}
+.title-text p{
+    margin: auto;
+    font-size:20px;
+    color:#009688;
+    font-weight:bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+   
+}
+.text-title h1{
+    font-size: 50px;
+}
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+ .features{
+    flex-basis: 50%;
+ }
+ .features-img{
+    flex-basis: 46%;
+    margin: auto;
+ }
+ .features-img img{
+    width: 60%;
+    border-radius: 10px;
+ }
+ .features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    color: #009688;
+ }
+ .features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+ }
+ .feature-icon img{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+ }
+ .feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+    font-weight: 400;
+ }
+ @media screen and (max-width: 770px) {
+    .text-title h1{
+        font-size: 35px;
+    }
+    .features{
+        flex-basis: 100%;
+     }
+     .features-img{
+        flex-basis: 100%;
+    
+     }
+     .features-img img{
+        width: 100%;
+        border-radius: 10px;
+     }
+ }
